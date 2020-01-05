@@ -7,6 +7,7 @@ public class LevelManager
     public bool hasCollectedCup { get; set; }
     public float jetpackPower { get; set; }
     private bool isJetpackEnabled;
+    public bool hasGun { get; set; }
 
     public LevelManager()
     {
@@ -40,6 +41,7 @@ public class LevelManager
     {
         hasCollectedCup = false;
         jetpackPower = 0;
+        hasGun = false;
     }
 
     public void ResetFromBeginning()

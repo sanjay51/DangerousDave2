@@ -5,9 +5,11 @@ using UnityEngine;
 public class DaveController : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
-    public float speed = 4.0f;
+    public float speed = 3.3f;
+    Vector2 lookDirection = new Vector2(1, 0);
 
     public LevelManager levelManager = new LevelManager();
+    public GameObject bulletPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class DaveController : MonoBehaviour
             Jump();
         }
 
-
+        HandleBullet();
         HandleJetpack();
         Move();
         HandleExit();
@@ -34,6 +36,12 @@ public class DaveController : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+
+        if (!Mathf.Approximately(horizontal, 0.0f))
+        {
+            lookDirection.Set(horizontal, 0);
+            lookDirection.Normalize();
+        }
 
         Vector2 position = transform.position;
         position.x += speed * horizontal * Time.deltaTime;
@@ -55,7 +63,7 @@ public class DaveController : MonoBehaviour
 
         if (hit.collider == null) { Debug.Log("NO raycast"); return; }
 
-        rigidbody2D.AddForce(transform.up * 350);
+        rigidbody2D.AddForce(transform.up * 325);
     }
 
     void HandleJetpack()
@@ -67,11 +75,24 @@ public class DaveController : MonoBehaviour
 
         if (levelManager.isJetpackRunning())
         {
-            levelManager.jetpackPower -= 5.0f * Time.deltaTime;
+            levelManager.jetpackPower -= 8.0f * Time.deltaTime;
             Debug.Log("Jetpack power left:" + levelManager.jetpackPower);
 
             rigidbody2D.gravityScale = 0;
         } else rigidbody2D.gravityScale = 1;
+    }
+
+    void HandleBullet()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            if (levelManager.hasGun)
+            {
+                GameObject bullet = Instantiate(bulletPrefab, rigidbody2D.position, Quaternion.identity);
+                BulletController bulletController = bullet.GetComponent<BulletController>();
+                bulletController.Launch(lookDirection, 500);
+            }
+        }
     }
 
     void HandleExit()
