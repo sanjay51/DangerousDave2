@@ -5,7 +5,7 @@ using UnityEngine;
 public class DaveController : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
-    public float speed = 3.0f;
+    public float speed = 4.0f;
 
     public LevelManager levelManager = new LevelManager();
 
@@ -24,21 +24,32 @@ public class DaveController : MonoBehaviour
             Jump();
         }
 
+
+        HandleJetpack();
         Move();
-        ProcessExit();
+        HandleExit();
     }
 
     void Move()
     {
         float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
 
         Vector2 position = transform.position;
         position.x += speed * horizontal * Time.deltaTime;
+
+        if (vertical != 0.0f && levelManager.isJetpackRunning())
+        {
+            position.y += speed * vertical * Time.deltaTime;
+        }
+
         transform.position = position;
     }
 
     void Jump()
     {
+        if (levelManager.isJetpackRunning()) return;
+
         Debug.Log("Jumping");
         RaycastHit2D hit = Physics2D.Raycast(rigidbody2D.position, Vector2.down, 0.9f, LayerMask.GetMask("Tiles"));
 
@@ -47,7 +58,23 @@ public class DaveController : MonoBehaviour
         rigidbody2D.AddForce(transform.up * 350);
     }
 
-    void ProcessExit()
+    void HandleJetpack()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftCommand))
+        {
+            levelManager.ToggleJetpack();
+        }
+
+        if (levelManager.isJetpackRunning())
+        {
+            levelManager.jetpackPower -= 5.0f * Time.deltaTime;
+            Debug.Log("Jetpack power left:" + levelManager.jetpackPower);
+
+            rigidbody2D.gravityScale = 0;
+        } else rigidbody2D.gravityScale = 1;
+    }
+
+    void HandleExit()
     {
         if (Input.GetKeyDown(KeyCode.Q))
             Application.Quit();
