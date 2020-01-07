@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2373772225101398945}
   - component: {fileID: 2373772225101398974}
   - component: {fileID: 2103516173}
+  - component: {fileID: 304295487854293327}
   m_Layer: 11
   m_Name: Dave
   m_TagString: Untagged
@@ -145,3 +146,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &304295487854293327
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2373772225101398946}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3a822ab8142242e7b4b6f262d0ad928, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

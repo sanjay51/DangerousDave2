@@ -104,18 +104,18 @@ TextureImporter:
       name: tilegun_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 35
-        height: 19
+        width: 33
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 330ed19f127f747309776e2fec450d24
+      spriteID: 917be1052cd9e4e6289c941df6d7f5d5
       internalID: 1581385930570200555
       vertices: []
       indices: 

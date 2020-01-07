@@ -37,6 +37,11 @@ public class LevelManager
         return this.isJetpackEnabled && jetpackPower > 0;
     }
 
+    public bool isClimbing()
+    {
+        return false;
+    }
+
     public void Reset()
     {
         hasCollectedCup = false;

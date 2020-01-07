@@ -1,0 +1,883 @@
+fileFormatVersion: 2
+guid: eed519506b52e450bb67fe3fd33f60cf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1797990853187899516
+    second: tileset_dave_0
+  - first:
+      213: 2325565911734786539
+    second: tileset_dave_1
+  - first:
+      213: -4774079855060065046
+    second: tileset_dave_2
+  - first:
+      213: 6128364964585028609
+    second: tileset_dave_3
+  - first:
+      213: 7137642558163609301
+    second: tileset_dave_4
+  - first:
+      213: 3413033455213180421
+    second: tileset_dave_5
+  - first:
+      213: -1479377076151912936
+    second: tileset_dave_6
+  - first:
+      213: -9046548578440669210
+    second: tileset_dave_7
+  - first:
+      213: 1464791383176807477
+    second: tileset_dave_8
+  - first:
+      213: -70520872719033997
+    second: tileset_dave_9
+  - first:
+      213: 1097355495598542159
+    second: tileset_dave_10
+  - first:
+      213: 4050829957009456030
+    second: tileset_dave_11
+  - first:
+      213: 3887388433254911810
+    second: tileset_dave_12
+  - first:
+      213: -6203297663128260806
+    second: tileset_dave_13
+  - first:
+      213: 3390013761553106182
+    second: tileset_dave_14
+  - first:
+      213: 8109778647510211215
+    second: tileset_dave_15
+  - first:
+      213: -6209825312482520978
+    second: tileset_dave_16
+  - first:
+      213: 1196227536605808038
+    second: tileset_dave_17
+  - first:
+      213: -6455394180092357607
+    second: tileset_dave_18
+  - first:
+      213: -31652072810027984
+    second: tileset_dave_19
+  - first:
+      213: 4728184431739583491
+    second: tileset_dave_20
+  - first:
+      213: -3701105235011131381
+    second: tileset_dave_21
+  - first:
+      213: 3522121930746451978
+    second: tileset_dave_22
+  - first:
+      213: -3544529385717540766
+    second: tileset_dave_23
+  - first:
+      213: -8506464672248900672
+    second: tileset_dave_24
+  - first:
+      213: -6956632762228376389
+    second: tileset_dave_25
+  - first:
+      213: 8557569279545057207
+    second: tileset_dave_26
+  - first:
+      213: 614557269999460377
+    second: tileset_dave_27
+  - first:
+      213: -3817029893792830863
+    second: tileset_dave_28
+  - first:
+      213: 7906540478915068352
+    second: tileset_dave_29
+  - first:
+      213: -4463479051928667203
+    second: tileset_dave_30
+  - first:
+      213: -4338006422409799207
+    second: tileset_dave_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tileset_dave_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c03716220be4e74a0e8c0158da5829
+      internalID: 1797990853187899516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 146.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4864797fb3e74854ae44f9f49546b4d
+      internalID: 2325565911734786539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 146.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d9c128dabee642f0b474020be351731
+      internalID: -4774079855060065046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 146.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f9fb4b7422f46a99437943426e6816
+      internalID: 6128364964585028609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_4
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 146.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4236d46e1909d462899b59cb3b17845a
+      internalID: 7137642558163609301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_5
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 146.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a1e6faa2e7f4f739c27bb60619b87e
+      internalID: 3413033455213180421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_6
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 146.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e210c5887f8d748e59b5ee952b952eff
+      internalID: -1479377076151912936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_7
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 146.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a335dcb28fd472cbe4e08a9a65addf
+      internalID: -9046548578440669210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415e5cba7d33e4cbea0c851822fec187
+      internalID: 1464791383176807477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_9
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 98.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef9ad0153fe743d28216a5dc1b4b6a6
+      internalID: -70520872719033997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_10
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 98.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e622b2e8dfe54e8c9c3e6e6d100e4ed
+      internalID: 1097355495598542159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_11
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 101
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 846dab6aef102486eb3029dc8e034947
+      internalID: 4050829957009456030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_12
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 102
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d97ab8bd5464249bca77d687045726
+      internalID: 3887388433254911810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_13
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 98.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56de3757f1e241019969c37c54c8ffb
+      internalID: -6203297663128260806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_14
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 98.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2028c6ed3c48c4993a5b051612798bdd
+      internalID: 3390013761553106182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_15
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 98.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffe6bb9a09dd4ba795949d268ba288f
+      internalID: 8109778647510211215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64afe4ac390b849eeba01592e086d2f8
+      internalID: -6209825312482520978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_17
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 50.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c51f2bd5af7949c9b214cb63249eedd
+      internalID: 1196227536605808038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_18
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 50.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e87c2a26e6c4dc0a494d6cb75a4040
+      internalID: -6455394180092357607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_19
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 50.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889a6060d64dd439389053c60a54b54e
+      internalID: -31652072810027984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_20
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 50.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce8c5f0fa0ed4ab9be473825ec589d5
+      internalID: 4728184431739583491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_21
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 49
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228eddb9790274f9cb41387d83c70d14
+      internalID: -3701105235011131381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_22
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 49
+        width: 54
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fd15ea74cc442e6a01f8f4c52de9ff
+      internalID: 3522121930746451978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_23
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 49
+        width: 54
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48519ad50a854c0fb11f0bb54ad5a3a
+      internalID: -3544529385717540766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5414ce6de3264a589ee53c59850a7a3
+      internalID: -8506464672248900672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_25
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 2.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46929a4bf1dd432ea0e007abca45281
+      internalID: -6956632762228376389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_26
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 2.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e188c98c97f9c458dbd84a101a263214
+      internalID: 8557569279545057207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_27
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 2.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77e0f10e8fd74c768d4737e577a9fbd
+      internalID: 614557269999460377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_28
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 2.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66343e52fda7f4d8681f75d4afcb1fff
+      internalID: -3817029893792830863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_29
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 2.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aabe18f9bb084b758df1060a055b830
+      internalID: 7906540478915068352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_30
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 2.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1839cc0227e54232beca913092c066e
+      internalID: -4463479051928667203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_dave_31
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 2.25
+        width: 59.875
+        height: 48.75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8995b2bcc470482785ec49a18ccd6c4
+      internalID: -4338006422409799207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
