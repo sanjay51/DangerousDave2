@@ -6,6 +6,8 @@ public class DaveController : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
     Animator animator;
+    AudioSource audioSource;
+
     public float speed = 3.3f;
     Vector2 lookDirection = new Vector2(1, 0);
     private bool isJumping = false;
@@ -13,12 +15,15 @@ public class DaveController : MonoBehaviour
 
     public LevelManager levelManager = new LevelManager();
     public GameObject bulletPrefab;
+    public AudioClip bulletClip;
+    public AudioClip jetpackClip;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         animator.SetFloat("Regular", 3.0f);
         animator.SetFloat("Special", 0.0f);
@@ -161,6 +166,7 @@ public class DaveController : MonoBehaviour
         if (isJumping) return;
 
         rigidbody2D.AddForce(transform.up * 325);
+        
     }
 
     void HandleJetpack()
@@ -188,6 +194,7 @@ public class DaveController : MonoBehaviour
                 GameObject bullet = Instantiate(bulletPrefab, rigidbody2D.position, Quaternion.identity);
                 BulletController bulletController = bullet.GetComponent<BulletController>();
                 bulletController.Launch(lookDirection, 500);
+                this.PlaySound(this.bulletClip);
             }
         }
     }
@@ -201,5 +208,10 @@ public class DaveController : MonoBehaviour
     public void Die()
     {
         levelManager.Restart();
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }
