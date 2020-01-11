@@ -22,6 +22,7 @@ public class JetpackController : MonoBehaviour
         if (daveController != null)
         {
             daveController.levelManager.jetpackPower = 100;
+            HealthController.instance.setJetpackFuel(1.0f);
             Destroy(gameObject);
         }
     }

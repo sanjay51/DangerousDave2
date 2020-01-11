@@ -12,11 +12,15 @@ public class DaveController : MonoBehaviour
     Vector2 lookDirection = new Vector2(1, 0);
     private bool isJumping = false;
     private bool isLookingRight = true;
+    private bool isDead = false;
+    private float deathTimer = 1.0f;
 
     public LevelManager levelManager = new LevelManager();
     public GameObject bulletPrefab;
     public AudioClip bulletClip;
     public AudioClip jetpackClip;
+
+    private static int livesLeft = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,10 @@ public class DaveController : MonoBehaviour
 
         animator.SetFloat("Regular", 3.0f);
         animator.SetFloat("Special", 0.0f);
+
+        HealthController.instance.setLives(livesLeft);
+
+        HealthController.instance.setJetpackFuel(0.0f);
     }
 
     // Update is called once per frame
@@ -42,6 +50,7 @@ public class DaveController : MonoBehaviour
         HandleJetpack();
         Move();
         HandleAnimation();
+        HandleDeath();
         HandleExit();
     }
 
@@ -59,12 +68,18 @@ public class DaveController : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Debug.Log(vertical);
 
         // By default, looking right;
         float regular = 3.0f;
         float special = 0.0f;
 
+        if (isDead)
+        {
+            // Dead
+            regular = 3;
+            special = 1;
+
+        } else
         if (levelManager.isJetpackRunning() && horizontal >= 0.0)
         {
             // Jetpack right
@@ -132,8 +147,6 @@ public class DaveController : MonoBehaviour
             special = 0;
         }
 
-        Debug.Log("Regular:" + regular + " ;Special: " + special);
-
         animator.SetFloat("Regular", regular);
         animator.SetFloat("Special", special);
     }
@@ -179,8 +192,8 @@ public class DaveController : MonoBehaviour
         if (levelManager.isJetpackRunning())
         {
             levelManager.jetpackPower -= 8.0f * Time.deltaTime;
-            Debug.Log("Jetpack power left:" + levelManager.jetpackPower);
 
+            HealthController.instance.setJetpackFuel(levelManager.jetpackPower / 100.0f);
             rigidbody2D.gravityScale = 0;
         } else rigidbody2D.gravityScale = 1;
     }
@@ -207,7 +220,23 @@ public class DaveController : MonoBehaviour
 
     public void Die()
     {
-        levelManager.Restart();
+        isDead = true;
+    }
+
+    private void HandleDeath()
+    {
+        if (isDead && deathTimer <= 0)
+        {
+            HealthController.instance.setLives(--livesLeft);
+            deathTimer = 1.0f;
+            isDead = false;
+            levelManager.Restart();
+        } else if (isDead)
+        {
+            rigidbody2D.simulated = false;
+            deathTimer -= Time.deltaTime;
+            Debug.Log(deathTimer);
+        }
     }
 
     public void PlaySound(AudioClip clip)
