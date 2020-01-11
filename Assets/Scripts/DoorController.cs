@@ -10,10 +10,11 @@ public class DoorController : MonoBehaviour
         DaveController daveController = collision.gameObject.GetComponent<DaveController>();
         if (daveController != null)
         {
-            if (daveController.levelManager.hasCollectedCup)
+            if (DaveController.gameState.levelState.hasCollectedCup)
             {
                 Destroy(gameObject);
-                daveController.levelManager.nextLevel();
+                Debug.Log("Istransitioning:" + DaveController.gameState.isLevelTransitioning);
+                DaveController.gameState.nextLevel();
             }
         }
     }

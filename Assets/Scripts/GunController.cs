@@ -21,7 +21,7 @@ public class GunController : MonoBehaviour
         DaveController daveController = collision.gameObject.GetComponent<DaveController>();
         if (daveController != null)
         {
-            daveController.levelManager.hasGun = true;
+            DaveController.gameState.levelState.hasGun = true;
             Destroy(gameObject);
         }
     }

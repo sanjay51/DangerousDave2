@@ -21,7 +21,7 @@ public class JetpackController : MonoBehaviour
         DaveController daveController = collision.gameObject.GetComponent<DaveController>();
         if (daveController != null)
         {
-            daveController.levelManager.jetpackPower = 100;
+            DaveController.gameState.levelState.jetpackPower = 100;
             HealthController.instance.setJetpackFuel(1.0f);
             Destroy(gameObject);
         }

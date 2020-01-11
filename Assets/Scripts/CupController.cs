@@ -23,7 +23,7 @@ public class CupController : MonoBehaviour
 
         if (daveController != null)
         {
-            daveController.levelManager.hasCollectedCup = true;
+            DaveController.gameState.levelState.hasCollectedCup = true;
         }
     }
 }

@@ -15,7 +15,7 @@ public class DaveController : MonoBehaviour
     private bool isDead = false;
     private float deathTimer = 1.0f;
 
-    public LevelManager levelManager = new LevelManager();
+    public static GameState gameState = new GameState();
     public GameObject bulletPrefab;
     public AudioClip bulletClip;
     public AudioClip jetpackClip;
@@ -80,18 +80,18 @@ public class DaveController : MonoBehaviour
             special = 1;
 
         } else
-        if (levelManager.isJetpackRunning() && horizontal >= 0.0)
+        if (gameState.isJetpackRunning() && horizontal >= 0.0)
         {
             // Jetpack right
             regular = 1;
             special = 1;
 
-        } else if (levelManager.isJetpackRunning() && horizontal < 0.0)
+        } else if (gameState.isJetpackRunning() && horizontal < 0.0)
         {
             // Jetpack left
             regular = -1;
             special = 1;
-        } else if (levelManager.isClimbing())
+        } else if (gameState.isClimbing())
         {
             // Climbing
             regular = 2;
@@ -165,7 +165,7 @@ public class DaveController : MonoBehaviour
         Vector2 position = transform.position;
         position.x += speed * horizontal * Time.deltaTime;
 
-        if (vertical != 0.0f && levelManager.isJetpackRunning())
+        if (vertical != 0.0f && gameState.isJetpackRunning())
         {
             position.y += speed * vertical * Time.deltaTime;
         }
@@ -175,7 +175,7 @@ public class DaveController : MonoBehaviour
 
     void Jump()
     {
-        if (levelManager.isJetpackRunning()) return;
+        if (gameState.isJetpackRunning()) return;
         if (isJumping) return;
 
         rigidbody2D.AddForce(transform.up * 325);
@@ -186,14 +186,14 @@ public class DaveController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftCommand))
         {
-            levelManager.ToggleJetpack();
+            gameState.ToggleJetpack();
         }
 
-        if (levelManager.isJetpackRunning())
+        if (gameState.isJetpackRunning())
         {
-            levelManager.jetpackPower -= 8.0f * Time.deltaTime;
+            gameState.levelState.jetpackPower -= 8.0f * Time.deltaTime;
 
-            HealthController.instance.setJetpackFuel(levelManager.jetpackPower / 100.0f);
+            HealthController.instance.setJetpackFuel(gameState.levelState.jetpackPower / 100.0f);
             rigidbody2D.gravityScale = 0;
         } else rigidbody2D.gravityScale = 1;
     }
@@ -202,7 +202,7 @@ public class DaveController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            if (levelManager.hasGun)
+            if (gameState.levelState.hasGun)
             {
                 GameObject bullet = Instantiate(bulletPrefab, rigidbody2D.position, Quaternion.identity);
                 BulletController bulletController = bullet.GetComponent<BulletController>();
@@ -230,7 +230,7 @@ public class DaveController : MonoBehaviour
             HealthController.instance.setLives(--livesLeft);
             deathTimer = 1.0f;
             isDead = false;
-            levelManager.Restart();
+            gameState.ResetLevel();
         } else if (isDead)
         {
             rigidbody2D.simulated = false;
