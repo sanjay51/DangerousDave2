@@ -12,9 +12,7 @@ public class DoorController : MonoBehaviour
         {
             if (DaveController.gameState.levelState.hasCollectedCup)
             {
-                Destroy(gameObject);
-                Debug.Log("Istransitioning:" + DaveController.gameState.isLevelTransitioning);
-                DaveController.gameState.nextLevel();
+                DaveController.gameState.nextLevel(daveController);
             }
         }
     }

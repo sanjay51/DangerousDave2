@@ -6,7 +6,7 @@ public class DaveController : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
     Animator animator;
-    AudioSource audioSource;
+    public static AudioSource audioSource;
 
     public float speed = 3.3f;
     Vector2 lookDirection = new Vector2(1, 0);
@@ -19,6 +19,9 @@ public class DaveController : MonoBehaviour
     public GameObject bulletPrefab;
     public AudioClip bulletClip;
     public AudioClip jetpackClip;
+    public AudioClip deathBlastClip;
+    public AudioClip levelCompleteAudioClip;
+    public AudioClip jumpAudioClip;
 
     private static int livesLeft = 3;
 
@@ -27,7 +30,11 @@ public class DaveController : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
         audioSource = GetComponent<AudioSource>();
+
+        if (gameState.isLevelTransitioning)
+            PlaySound(levelCompleteAudioClip);
 
         animator.SetFloat("Regular", 3.0f);
         animator.SetFloat("Special", 0.0f);
@@ -57,7 +64,10 @@ public class DaveController : MonoBehaviour
     void RefreshVariables()
     {
         RaycastHit2D hit = Physics2D.Raycast(rigidbody2D.position, Vector2.down, 0.9f, LayerMask.GetMask("Tiles"));
-        if (hit.collider == null) { isJumping = true; } else { isJumping = false; }
+        RaycastHit2D hit2 = Physics2D.Raycast(rigidbody2D.position, new Vector2(1, -1), 2f, LayerMask.GetMask("Tiles"));
+        RaycastHit2D hit3 = Physics2D.Raycast(rigidbody2D.position, new Vector2(-1, -1), 2f, LayerMask.GetMask("Tiles"));
+        if ((hit.collider == null && hit2.collider == null)
+            || (hit.collider == null && hit3.collider == null)) { isJumping = true; } else { isJumping = false; }
 
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal > 0.0f) isLookingRight = true;
@@ -178,6 +188,7 @@ public class DaveController : MonoBehaviour
         if (gameState.isJetpackRunning()) return;
         if (isJumping) return;
 
+        PlaySound(this.jumpAudioClip);
         rigidbody2D.AddForce(transform.up * 325);
         
     }
@@ -207,7 +218,7 @@ public class DaveController : MonoBehaviour
                 GameObject bullet = Instantiate(bulletPrefab, rigidbody2D.position, Quaternion.identity);
                 BulletController bulletController = bullet.GetComponent<BulletController>();
                 bulletController.Launch(lookDirection, 500);
-                this.PlaySound(this.bulletClip);
+                DaveController.PlaySound(this.bulletClip);
             }
         }
     }
@@ -221,6 +232,7 @@ public class DaveController : MonoBehaviour
     public void Die()
     {
         isDead = true;
+        DaveController.PlaySound(this.deathBlastClip);
     }
 
     private void HandleDeath()
@@ -239,7 +251,7 @@ public class DaveController : MonoBehaviour
         }
     }
 
-    public void PlaySound(AudioClip clip)
+    public static void PlaySound(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
     }

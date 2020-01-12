@@ -100,8 +100,12 @@ MonoBehaviour:
   speed: 3.3
   bulletPrefab: {fileID: 2168275278980578707, guid: 69660a50f49884a02b6a479edab16717,
     type: 3}
-  bulletClip: {fileID: 8300000, guid: adb58c70d96aa465190033558db1302e, type: 3}
+  bulletClip: {fileID: 8300000, guid: a4cc3aa4970ba4469b76c20bb163371f, type: 3}
   jetpackClip: {fileID: 8300000, guid: fce6143e960bf4068a4eb55c62c73560, type: 3}
+  deathBlastClip: {fileID: 8300000, guid: 6e0f953c84c654df598106bc1cfa2275, type: 3}
+  levelCompleteAudioClip: {fileID: 8300000, guid: bf7c660e4b34144d1a60a5063a3b1f4a,
+    type: 3}
+  jumpAudioClip: {fileID: 8300000, guid: f32c95c96d480422ebf7072d3b788cff, type: 3}
 --- !u!50 &2373772225101398974
 Rigidbody2D:
   serializedVersion: 4
@@ -180,8 +184,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.5
+  m_Pitch: 0.72
   Loop: 0
   Mute: 0
   Spatialize: 0

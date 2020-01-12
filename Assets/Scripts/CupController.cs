@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CupController : MonoBehaviour
 {
+    public AudioClip cupCollectAudioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class CupController : MonoBehaviour
 
         if (daveController != null)
         {
+            DaveController.PlaySound(cupCollectAudioClip);
             DaveController.gameState.levelState.hasCollectedCup = true;
         }
     }

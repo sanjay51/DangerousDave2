@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DiamondController : MonoBehaviour
 {
+    public AudioClip diamondCollectAudioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,7 @@ public class DiamondController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        DaveController.PlaySound(diamondCollectAudioClip);
         Destroy(gameObject);
     }
 }

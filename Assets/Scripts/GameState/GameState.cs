@@ -13,7 +13,7 @@ public class GameState
         isLevelTransitioning = false;
     }
 
-    public void nextLevel()
+    public void nextLevel(DaveController daveController)
     {
         levelState = new LevelState();
         if (isLevelTransitioning)

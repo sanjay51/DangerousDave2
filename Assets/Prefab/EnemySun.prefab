@@ -121,12 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78d259e2120d4797a28678625d798cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  path: {fileID: 0}
   speed: 3
   rotationSpeed: 1
+  distanceTravelled: 0
+  enemyBlastAudioClip: {fileID: 8300000, guid: 4aa05c7ef779a4524b634cd0e1ca505f, type: 3}

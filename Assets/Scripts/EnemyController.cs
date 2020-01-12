@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     public float rotationSpeed = 1.0f;
 
     public float distanceTravelled;
+    public AudioClip enemyBlastAudioClip;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +54,7 @@ public class EnemyController : MonoBehaviour
         BulletController bulletController = collision.gameObject.GetComponent<BulletController>();
         if (bulletController != null)
         {
+            DaveController.PlaySound(enemyBlastAudioClip);
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
