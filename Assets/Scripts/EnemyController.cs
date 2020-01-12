@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public Transform[] points;
+    public float speed = 3.0f;
+    public float rotationSpeed = 1.0f;
+
+    private int currentPoint = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +19,18 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (points != null && points.Length != 0)
+        {
+            if (transform.position != points[currentPoint].position)
+            {
+                Vector2 pos = Vector2.MoveTowards(transform.position, points[currentPoint].position, speed * Time.deltaTime);
+                transform.position = pos;
+                transform.eulerAngles += Vector3.forward * rotationSpeed;
+            } else
+            {
+                currentPoint = (currentPoint + 1) % points.Length;
+            }
+        }
 
     }
 
