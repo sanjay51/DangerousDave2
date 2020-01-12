@@ -25,11 +25,16 @@ public class EnemyController : MonoBehaviour
             {
                 Vector2 pos = Vector2.MoveTowards(transform.position, points[currentPoint].position, speed * Time.deltaTime);
                 transform.position = pos;
-                transform.eulerAngles += Vector3.forward * rotationSpeed;
             } else
             {
                 currentPoint = (currentPoint + 1) % points.Length;
             }
+        }
+
+        if (rotationSpeed != 0)
+        {
+            transform.eulerAngles += Vector3.forward * rotationSpeed;
+
         }
 
     }
