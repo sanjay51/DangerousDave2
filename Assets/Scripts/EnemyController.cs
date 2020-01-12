@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PathCreation;
 
 public class EnemyController : MonoBehaviour
 {
-    public Transform[] points;
+    public PathCreator path;
     public float speed = 3.0f;
     public float rotationSpeed = 1.0f;
 
-    private int currentPoint = 0;
+    public float distanceTravelled;
 
     // Start is called before the first frame update
     void Start()
@@ -19,22 +20,15 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (points != null && points.Length != 0)
+        if (path != null)
         {
-            if (transform.position != points[currentPoint].position)
-            {
-                Vector2 pos = Vector2.MoveTowards(transform.position, points[currentPoint].position, speed * Time.deltaTime);
-                transform.position = pos;
-            } else
-            {
-                currentPoint = (currentPoint + 1) % points.Length;
-            }
+            distanceTravelled += speed * Time.deltaTime;
+            transform.position = path.path.GetPointAtDistance(distanceTravelled);
         }
 
         if (rotationSpeed != 0)
         {
             transform.eulerAngles += Vector3.forward * rotationSpeed;
-
         }
 
     }
