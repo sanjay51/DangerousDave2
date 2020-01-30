@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     public PathCreator path;
     public float speed = 3.0f;
     public float rotationSpeed = 1.0f;
+    public float shootSpeed = 0.0f;
 
     public float distanceTravelled;
     public AudioClip enemyBlastAudioClip;
