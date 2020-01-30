@@ -195,7 +195,7 @@ public class DaveController : MonoBehaviour
 
     void HandleJetpack()
     {
-        if (Input.GetKeyDown(KeyCode.LeftCommand))
+        if (Input.GetKeyDown(KeyCode.LeftCommand) || Input.GetKeyDown(KeyCode.RightCommand))
         {
             gameState.ToggleJetpack();
         }
@@ -211,7 +211,7 @@ public class DaveController : MonoBehaviour
 
     void HandleBullet()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        if (Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetKeyDown(KeyCode.RightAlt))
         {
             if (gameState.levelState.hasGun)
             {
