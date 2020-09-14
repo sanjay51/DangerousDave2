@@ -206,7 +206,7 @@ public class DaveController : MonoBehaviour
 
             HealthController.instance.setJetpackFuel(gameState.levelState.jetpackPower / 100.0f);
             rigidbody2D.gravityScale = 0;
-        } else rigidbody2D.gravityScale = 1;
+        } else rigidbody2D.gravityScale = 0.8f;
     }
 
     void HandleBullet()
